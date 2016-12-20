@@ -3,4 +3,21 @@ class Magentotutorial_Helloworld_IndexController extends Mage_Core_Controller_Fr
     public function indexAction() {
         echo 'Hello World';
     }
+    public function goodbyeAction() {
+    	echo 'Goodbye world!!!!!';
+    }
+  	public function paramsAction() {
+	    echo '
+		';            
+	    foreach($this->getRequest()->getParams() as $key=>$value) {
+	        echo '
+				Param: '.$key.'
+			';
+	        echo '
+				Value: '.$value.'
+			';
+	    }
+	    echo '
+		';
+	}
 }
