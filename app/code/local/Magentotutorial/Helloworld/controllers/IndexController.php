@@ -7,6 +7,8 @@ class Magentotutorial_Helloworld_IndexController extends Mage_Core_Controller_Fr
     }
     public function goodbyeAction() {
     	echo 'Goodbye world!!!!!';
+    	$this->loadLayout();
+		$this->renderLayout();
     }
   	public function paramsAction() {
 	    echo '

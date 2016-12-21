@@ -1,5 +1,20 @@
 <layout version="0.1.0">
-    <default>
-        <block type="page/html" name="root" output="toHtml" template="magentotutorial/helloworld/simple_page.phtml" />
-    </default>
+	<!-- if we use default it will work for every page, if we don't want it fire on every page, we can chage default tag to be helloworld_index_index for only one page -->
+    <helloworld_index_index>
+    	<reference name="root">
+    		<action method="setTemplate">
+    			<template>magentotutorial/helloworld/simple_page.phtml</template> <!-- the name of node does't matter, so template can be any other name -->
+    		</action>
+        	<block type="page/template_links" name="top.links" />
+        	<block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml" />
+        </reference>
+ <!--        or we can do this, they are same effect::
+        <block type="page/html" name="root" output="toHtml" template="magentotutorial/helloworld/simple_page.phtml">
+        	<block type="page/template_links" name="top.links"/>
+       		<block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml"/>
+    	</block> -->
+    </helloworld_index_index>
+    <helloworld_index_goodbye>
+    	<update handle="helloworld_index_index" />
+    </helloworld_index_goodbye>
 </layout>
