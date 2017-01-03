@@ -85,6 +85,8 @@ class Mage_Core_Model_Session_Abstract_Varien extends Varien_Object
         }
 
         // session cookie params
+
+        /*
         $cookieParams = array(
             'lifetime' => $cookie->getLifetime(),
             'path'     => $cookie->getPath(),
@@ -103,6 +105,7 @@ class Mage_Core_Model_Session_Abstract_Varien extends Varien_Object
             }
         }
 
+*/
         if (isset($cookieParams['domain'])) {
             $cookieParams['domain'] = $cookie->getDomain();
         }
