@@ -1,0 +1,8 @@
+<config>
+	<modules>
+		<Mymodule_Myhello>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Mymodule_Myhello>
+	</modules>
+</config>

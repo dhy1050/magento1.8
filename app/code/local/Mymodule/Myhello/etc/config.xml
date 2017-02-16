@@ -1,0 +1,18 @@
+<config>
+	<modules>
+		<Mymodule_Myhello>
+			<version>0.1.0</version>
+		</Mymodule_Myhello>
+	</modules>
+	<frontend>
+		<routers>
+			<myhello>
+				<use>standard</use>
+				<args>
+					<module>Mymodule_Myhello</module>
+					<frontName>myhello</frontName>
+				</args>
+			</myhello>
+		</routers>
+	</frontend>
+</config>
